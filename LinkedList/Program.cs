@@ -11,18 +11,20 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List");
-            LinkedListOne linkedlist = new LinkedListOne();
-            //linkedlist.Add(56);
-            //linkedlist.Add(30);
-            //linkedlist.Add(70);
-            //linkedlist.Display(); 
-
-            linkedlist.AddinreverseOrder(70);
-            linkedlist.AddinreverseOrder(30);
-            linkedlist.AddinreverseOrder(56);
-            linkedlist.Display();
-
+            LinkedListOne list = new LinkedListOne();
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            //list.InsertAtParticularPosition(2,30);
+            LinkedListOne list2 = new LinkedListOne();
+            //Appends the Nodes
+            list2.AddFirst(56);
+            list2.AddFirst(30);
+            list2.AddFirst(70);
+            list2.Display();
             Console.ReadKey();
+            list.Display();
+            Console.ReadLine();
         }
 
     }

@@ -28,6 +28,11 @@ namespace LinkedList
             Console.Write("\n {0} inserted into linked list", node.data);
         }
 
+        internal void AddFirst(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         internal void AddinreverseOrder(int v)
         {
             throw new NotImplementedException();
@@ -47,6 +52,8 @@ namespace LinkedList
             {
                 Console.Write(temp.data + " ");
                 temp = temp.next;
+
+                Console.ReadKey();
             }
         }
     }
