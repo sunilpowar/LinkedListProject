@@ -27,6 +27,12 @@ namespace LinkedList
             }
             Console.Write("\n {0} inserted into linked list", node.data);
         }
+
+        internal void AddinreverseOrder(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         internal void Display()
         {
             Console.Write("\n Data of linked list : ");
