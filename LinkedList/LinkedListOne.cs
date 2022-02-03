@@ -27,17 +27,21 @@ namespace LinkedList
             }
             Console.Write("\n {0} inserted into linked list", node.data);
         }
-
-        internal void AddFirst(int v)
+        public void AddinreverseOrder(int data)
         {
-            throw new NotImplementedException();
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
+            Console.Write("\n {0} inserted into linked list", newNode.data);
         }
-
-        internal void AddinreverseOrder(int v)
-        {
-            throw new NotImplementedException();
-        }
-
         internal void Display()
         {
             Console.Write("\n Data of linked list : ");
@@ -52,9 +56,42 @@ namespace LinkedList
             {
                 Console.Write(temp.data + " ");
                 temp = temp.next;
-
-                Console.ReadKey();
             }
+        }
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            return this.head;
+        }
+        internal Node RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
         }
     }
 }
