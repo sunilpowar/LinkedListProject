@@ -16,7 +16,10 @@ namespace LinkedList
             linkedlist.Add(56);
             linkedlist.Add(30);
             linkedlist.Add(70);
-            linkedlist.RemoveLastNode();
+            linkedlist.Display();
+            int position = linkedlist.Search(30);
+            position++;
+            linkedlist.InsertAtParticularPosition(position, 40);
             linkedlist.Display();
             Console.ReadLine();
 
