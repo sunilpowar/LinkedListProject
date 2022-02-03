@@ -11,11 +11,11 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List");
-            LinkedListOne list = new LinkedListOne();
+            LinkedListOne list = newLinkedListOne();
             list.Add(56);
-            list.Add(30);
+            //list.Add(30);
             list.Add(70);
-            //list.InsertAtParticularPosition(2,30);
+            list.InsertAtParticularPosition(2, 30);
             LinkedListOne list2 = new LinkedListOne();
             //Appends the Nodes
             list2.AddFirst(56);
@@ -27,5 +27,9 @@ namespace LinkedList
             Console.ReadLine();
         }
 
+        private static LinkedListOne newLinkedListOne()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
